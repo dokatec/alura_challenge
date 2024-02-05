@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eff1fa;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+
+.conteudo {
+  width: 100%;
+  height: 100vh;
+}
+
+.retangulo {
+  width: 30%;
+  height: 90vh;
+  margin: 3%;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.retangulo img {
+  width: 250px;
+  height: 250px;
+}
+
+.retangulo h1 {
+  color: #343a40;
+}
+
+.retangulo p {
+  color: #495057;
+}
