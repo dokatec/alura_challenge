@@ -9,17 +9,24 @@
   <body>
     <main>
       <section class="conteudo">
-        <img src="" alt="" />
-        <h3>Digite seu texto</h3>
-        <button>Criptografar</button>
-        <button>Descriptografar.</button>
+        <h1>a</h1>
+        <textarea rows="5" cols="10"  placeholder="Digite seu texto"></textarea>
+        <div class="btn-group">
+          <p>Apenas letras minúsculas e sem acento.</p>
+          <button class="btn-clip" onclick="encrypt()">Criptografar</button>
+          <button class="btn-desc" onclick="decrypt()">Descriptografar</button>
+        </div>
       </section>
+
       <section class="retangulo">
         <img src="imgs/imagem.svg" alt="" />
-        <h1>Nenhuma mensagem encontrada</h1>
-        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        <h3>Nenhuma mensagem encontrada</h3>
+        <p>
+          Digite um texto que você deseja criptografar ou descriptografar.</br>
+        </p>
       </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

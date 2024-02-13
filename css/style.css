@@ -14,7 +14,7 @@ body {
 main {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   height: 100vh;
 }
@@ -22,10 +22,72 @@ main {
 .conteudo {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+}
+
+.conteudo h1 {
+  font-size: 64px;
+  font-weight: 500;
+  color: #0a3871;
+  margin: 0 3%;
+}
+
+.conteudo textarea {
+  resize: none;
+  width: 80%;
+  height: 10rem;
+  padding: 2%;
+  background-color: #d8dfe8;
+  font-size: 24px;
+  color: #0a3871;
+  outline: none;
+  border: 2px solid #d8dfe8;
+  border-radius: 10px;
+  margin: 0 10%;
+}
+
+::placeholder {
+  color: #0a3871;
+  font-weight: 700;
+}
+
+.btn-group {
+  width: 100%;
+  height: auto;
+  margin: 3% 10%;
+}
+
+.btn-group p {
+  font-size: 12px;
+  color: #0a3871;
+  margin: 1%;
+}
+
+.btn-clip {
+  width: 30%;
+  height: 2.5rem;
+  background-color: #0a3871;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.btn-desc {
+  width: 30%;
+  height: 2.5rem;
+  background-color: #d8dfe8;
+  outline: none;
+  border: 1px solid #0a3871;
+  color: #0a3871;
+  border-radius: 10px;
 }
 
 .retangulo {
-  width: 30%;
+  width: 40%;
   height: 90vh;
   margin: 3%;
   padding: 50px;
@@ -34,7 +96,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .retangulo img {
@@ -46,6 +108,8 @@ main {
   color: #343a40;
 }
 
-.retangulo p {
-  color: #495057;
+.pwidth {
+  color: red;
+  width: auto;
+  height: auto;
 }
