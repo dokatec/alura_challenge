@@ -1,35 +1,24 @@
-function encrypt() {
-    let textareaElement = document.querySelector(".conteudo textarea").value;
+let textareaElement = document.querySelector(".conteudo textarea");
+let pElement = document.querySelector(".retangulo p");
+let imgElement = document.querySelector(".retangulo img");
+let headerElement = document.querySelector(".retangulo h3");
+let buttonElement = document.getElementById("btn-clip");
 
-    let imgElement = document.querySelector('.retangulo img');
-    imgElement.parentNode.removeChild(imgElement);
-    /*
-        let pelement = document.querySelector('.retangulo p');
-        pelement.parentNode.removeChild(pelement);
-    */
-    let encrypted = CryptoJS.AES.encrypt(textareaElement, "password");
-    document.querySelector('.retangulo p').innerHTML = encrypted;
+function criptografar() {
+  buttonElement.addEventListener("click", () => {
+    headerElement.textContent = "Texto Codificado!";
+    texto = textareaElement.value;
+    resultado = texto
+      .replace(/a/g, "=asd")
+      .replace(/e/g, "@bnm")
+      .replace(/i/g, "+iop")
+      .replace(/o/g, ".opq")
+      .replace(/u/g, "çuyt");
+
+    pElement.textContent = resultado;
+  });
 }
 
-function decrypt() {
-
-    let headerElement = document.querySelector(".conteudo textarea").value
-    // let headerElement = document.querySelector('.retangulo h1').innerHTML;
-    let decrypted = CryptoJS.AES.decrypt(headerElement, "password");
-    document.querySelector('.retangulo h3').innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
+function remove() {
+  imgElement.parentNode.removeChild(imgElement);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

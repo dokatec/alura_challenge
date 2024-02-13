@@ -13,8 +13,8 @@
         <textarea rows="5" cols="10"  placeholder="Digite seu texto"></textarea>
         <div class="btn-group">
           <p>Apenas letras minúsculas e sem acento.</p>
-          <button class="btn-clip" onclick="encrypt()">Criptografar</button>
-          <button class="btn-desc" onclick="decrypt()">Descriptografar</button>
+          <button id="btn-clip" class="btn-clip" onclick="criptografar()">Criptografar</button>
+          <button id="btn-desc" class="btn-desc">Descriptografar</button>
         </div>
       </section>
 
@@ -26,7 +26,7 @@
         </p>
       </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    
     <script src="js/index.js"></script>
   </body>
 </html>
