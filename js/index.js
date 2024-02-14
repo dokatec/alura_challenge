@@ -1,45 +1,60 @@
+let bodyElement = document.querySelector("body");
 let textareaElement = document.querySelector(".conteudo textarea");
+let retanguloElement = document.querySelector(".retangulo");
 let pElement = document.querySelector(".retangulo p");
-let imgElement = document.querySelector(".retangulo img");
 let headerElement = document.querySelector(".retangulo h3");
 let buttonElement = document.getElementById("btn-clip");
 let buttonElementDesc = document.getElementById("btn-desc");
-
-let retanguloElement = document.querySelector(".retangulo");
+let buttonElementCopiar = document.getElementById("btn-copiar");
+let imgElement = document.querySelector(".retangulo img");
 
 function criptografar() {
-  buttonElement.addEventListener("click", () => {
-    headerElement.textContent = "Texto Codificado!";
+  if (textareaElement.value) {
+    removeImg();
+    headerElement.textContent = "Texto Criptografado!";
     texto = textareaElement.value;
     resultado = texto
-      .replace(/a/g, "#qzwsx")
-      .replace(/e/g, "dcrfv@")
-      .replace(/i/g, "tgbyh!")
-      .replace(/o/g, "njmkl%")
-      .replace(/u/g, "&pçzxc");
+      .replace(/a/g, "#qzw")
+      .replace(/e/g, "dfv@")
+      .replace(/i/g, "tyh!")
+      .replace(/o/g, "jmk%")
+      .replace(/u/g, "&pzc");
 
     pElement.textContent = resultado;
-  });
+  } else {
+    alert("Você precisar digitar o texto para criptografar");
+  }
 }
 
 function descriptografar() {
-  buttonElementDesc.addEventListener("click", () => {
+  if (textareaElement.value) {
+    removeImg();
+    headerElement.textContent = "Texto Descriptografado!";
     texto = textareaElement.value;
     resultado = texto
-      .replace(/#qzwsx/g, "a")
-      .replace(/dcrfv@/g, "e")
-      .replace(/tgbyh!/g, "i")
-      .replace(/njmkl%/g, "o")
-      .replace(/&pçzxc/g, "u");
+      .replace(/#qzw/g, "a")
+      .replace(/dfv@/g, "e")
+      .replace(/tyh!/g, "i")
+      .replace(/jmk%/g, "o")
+      .replace(/&pzc/g, "u");
 
     pElement.textContent = resultado;
-  })
+  } else {
+    alert("Você precisar copiar o texto para descriptografar");
+  }
 }
 
-function remove() {
-  if (pElement.value) {
-    imgElement.parentNode.removeChild(imgElement);
+function copyToClipBoard() {
+  if (textareaElement.value) {
+    removeImg();
+    textToCopy = pElement.textContent;
+    navigator.clipboard.writeText(textToCopy);
+    textareaElement.value = textToCopy;
   } else {
-
+    alert("Você não texto na area de criptografia para copiar!");
   }
-} 
+}
+
+function removeImg() {
+  imgElement.remove();
+}

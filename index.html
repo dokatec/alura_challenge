@@ -10,23 +10,26 @@
     <main>
       <section class="conteudo">
         <h1>a</h1>
-        <textarea rows="5" cols="10"  placeholder="Digite seu texto" maxlength="255"></textarea>
+        <textarea placeholder="Digite seu texto"></textarea>
         <div class="btn-group">
           <p>Apenas letras minúsculas e sem acento.</p>
-          <button id="btn-clip" class="btn-clip" onclick="criptografar()">Criptografar</button>
-          <button id="btn-desc" class="btn-desc" onclick="descriptografar()">Descriptografar</button>
+          <button id="btn-clip" class="btn-clip" onclick="criptografar()">
+            Criptografar
+          </button>
+          <button id="btn-desc" class="btn-desc" onclick="descriptografar()">
+            Descriptografar
+          </button>
         </div>
       </section>
 
       <section class="retangulo">
-       <!-- <img src="imgs/imagem.svg" alt="" />-->
+        <img src="imgs/imagem.svg" alt="" />
         <h3>Nenhuma mensagem encontrada</h3>
-        <p>
-          Digite um texto que você deseja criptografar ou descriptografar.</br>
-        </p>
+        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        <button id="btn-copiar" onclick="copyToClipBoard()">Copiar</button>
       </section>
     </main>
-    
+
     <script src="js/index.js"></script>
   </body>
 </html>
