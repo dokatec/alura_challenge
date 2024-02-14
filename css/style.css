@@ -119,6 +119,19 @@ main {
   border-radius: 10px;
 }
 
+.rodape {
+  width: 80%;
+  height: 2.5rem;
+  margin: 0 10%;
+  background-color: #d8dfe8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: #0a3871;
+}
+
 /* responsive celular small */
 
 @media (max-width: 374.98px) {
